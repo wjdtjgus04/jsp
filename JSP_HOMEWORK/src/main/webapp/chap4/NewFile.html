@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		table,th,td{
+			border: 1px solid black;
+			border-collapse: collapse;
+			text-align: left;
+		}
+		th,td{
+			padding: 8px;
+		}
+		h2{
+			font-size: 50px;
+		}
+	</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2> 기술정보 이력서</h2>
+<form method="get" action="chap4_6.jsp">
+<table>
+	<tr>
+		<th>이름</th>
+		<td><input type="text" name ="name"></td>
+	</tr>
+	<tr>
+		<th>주민등록번호</th>
+		<td><input type="text" name ="number1"> - <input type="text" name ="number2"></td>
+	</tr>
+	<tr>
+		<th>학력</th>
+		<td>
+			고졸<input type="radio"name ="grade"value="고졸">
+			대학<input type="radio"name ="grade"value="대학">
+			대학원생<input type="radio"name ="grade"value="대학원생"></td>
+	</tr>
+		<tr>
+		<th>전공</th>
+		<td>
+			<select  name="major">
+					<option selected value="인공지능소프트웨어학과">인공지능소프트웨어학과</option>
+					<option  value="산업공학과">산업공학과</option>
+					<option  value="호텔관광과">호텔관광과</option>
+					<option  value="법학과">법학과</option>
+					<option  value="정보통신학과">정보통신학과</option>
+			</select>
+		</td>
+	</tr>
+		<tr>
+		<th>사용가능한 플랫폼</th>
+		<td><select multiple  name="platform">
+					<option selected value="Windows PC">Windows 계열 PC</option>
+					<option  value="UNIX">UNIX"</option>
+					<option  value="IBM OS/390">IBM OS/390</option>
+					<option  value="Linux">Linux</option>
+					
+			</select><p></td>
+	</tr>
+		<tr>
+		<th><input type="submit" value ="보내기"></th>
+		<td><input type="reset" value ="취소"></td>
+	</tr>
+	
+
+</table>
+</form>
+</body>
+</html>
