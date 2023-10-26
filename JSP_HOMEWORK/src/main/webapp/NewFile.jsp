@@ -7,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-원주율은 <%= Math.PI %>
+<% int sum = 0; %>
+<% for(int i = 1; i<=100; i++){
+	sum = sum+i;
+} %>
+
+1부터 100까지의 합은 <%= sum %>이다
 </body>
 </html>
