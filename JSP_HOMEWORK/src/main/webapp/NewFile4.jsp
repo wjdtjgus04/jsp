@@ -7,5 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<% response. sendRedirect("http://localhost:8082/JSP_HOMEWORK/hobbysub.jsp?hobby=golf");%>
+<jsp:forward page ="hobbysub.jsp"/>
+
 </html>
