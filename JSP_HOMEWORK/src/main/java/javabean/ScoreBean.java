@@ -4,7 +4,7 @@ public class ScoreBean {
 
 	private String name;
 	private int point;
-	private char grade;
+	private String grade;
 	
 	public String getName() {
 		return name;
@@ -19,21 +19,22 @@ public class ScoreBean {
 		this.point = point;
 	}
 	
-	public char getGrade(int point) {
+	public String getGrade() {
+		String grade ="";
 		if(point>=90) {
-			grade ='A';
+			grade ="A";
 		}
 		else if(point>=80 && point<90) {
-			grade ='B';
+			grade ="B";
 		}
 		else if(point>=70 && point<80) {
-			grade ='C';
+			grade ="C";
 		}
 		else if(point>=60 && point<70) {
-			grade ='D';
+			grade ="D";
 		}
 		else {
-			grade ='F';
+			grade ="F";
 		}
 		
 		return grade;
