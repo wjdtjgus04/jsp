@@ -21,6 +21,7 @@
 	<h3>java Beans scoreBean에 저장된 정보를 조회출력</h3>
 	이름: <jsp:getProperty name="score" property="name"/><br>
 	성적: <jsp:getProperty name="score" property="point"/><br>
+	학점: <jsp:getProperty name="score" property="grade"/>
 	
 	
 
