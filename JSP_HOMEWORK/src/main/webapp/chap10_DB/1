@@ -1,0 +1,9 @@
+create database world;
+use world;
+create table city(
+id int NOT NULL PRIMARY KEY,
+name varchar(50) not null,
+major varchar(20)  null,
+
+
+)
