@@ -17,7 +17,7 @@
 <%
 	Connection con = null;
 	
-	Statement smt = null;
+	Statement stmt = null;
 	String driverName = "com.mysql.jdbc.Driver";
 	String dbURL="jdbc:mysql://localhost:3306/mysql";
 	
@@ -52,7 +52,6 @@
 	<td aligin=center><%=result.getString(5) %></td>
 	<td aligin=center><%=result.getString(6) %></td>
 	<td aligin=center><%=result.getString(7) %></td>
-	
 	<td aligin=center><%=result.getString(8) %></td>
 	<td aligin=center><%=result.getString(9) %></td>
 	<td aligin=center><%=result.getString(10) %></td>
@@ -64,6 +63,13 @@
 }
 catch(Exception e){
 	out.println("student조회에 문제가 생겼습니다<hr>");
+	out.println(e.toString());
+	e.printStackTrace();
+	}
+finally{
+	if(stmt !=null)stmt.close();
+	if(con !=null)con.close();
+	
 }
 %>
 
