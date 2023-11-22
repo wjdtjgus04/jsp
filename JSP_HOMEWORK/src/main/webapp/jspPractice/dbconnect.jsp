@@ -14,6 +14,17 @@
 try{
 	String driverName="org.git.mm.mysql.Driver";
 	String dbURL="jdbc:mysql://localhost:3306/mysql";
+	
+	Class.forName(driverName);
+	Connection con =DriverManager.getConnection(dbURL,"root","wjdtjgus04");
+	out.println("성공적으로 접속했습니다.");
+	
+}
+catch (Exception e){
+	
+	out.println("접속에 문제가 생겼습니다");
+	out.println(e.getMessage());
+	e.printStackTrace();
 }
 %>
 </body>
