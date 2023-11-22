@@ -18,11 +18,11 @@
 	Connection con = null;
 	
 	Statement stmt = null;
-	String driverName = "com.mysql.jdbc.Driver";
+	String driverName="com.mysql.cj.jdbc.Driver";
 	String dbURL="jdbc:mysql://localhost:3306/mysql";
 	
 	try{
-		Class.forName(dbURL);
+		Class.forName(driverName);
 		con=DriverManager.getConnection(dbURL,"root","wjdtjgus04");
 		stmt = con.createStatement();
 		ResultSet result = stmt.executeQuery("select * from student;");
