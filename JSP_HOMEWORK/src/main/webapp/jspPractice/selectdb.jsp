@@ -7,12 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<link rel="stylesheet" type ="text/css" href ="1.css">
 <%@ page import="java.sql.*" %>
+
 
 <h2>데이터베이스 테이블 student 조회</h2>
 
-<hr>
+<hr><center>
 <h2>학생조회</h2>
 <%
 	Connection con = null;
@@ -29,32 +30,32 @@
 		
 	
 %>
-<table width =100% border =2 cellpadding=1>
+<table>
 <tr>
-	<td aligin=center><b>아이디</b></td>
-	<td aligin=center><b>암호</b></td>
-	<td aligin=center><b>이름</b></td>
-	<td aligin=center><b>입학년도</b></td>
-	<td aligin=center><b>학번</b></td>
-	<td aligin=center><b>학과</b></td>
-	<td aligin=center><b>휴대폰1</b></td>
-	<td aligin=center><b>휴대폰2</b></td>
-	<td aligin=center><b>주소</b></td>
-	<td aligin=center><b>이메일</b></td>
+	<td ><b>아이디</b></td>
+	<td ><b>암호</b></td>
+	<td ><b>이름</b></td>
+	<td ><b>입학년도</b></td>
+	<td ><b>학번</b></td>
+	<td ><b>학과</b></td>
+	<td><b>휴대폰1</b></td>
+	<td ><b>휴대폰2</b></td>
+	<td ><b>주소</b></td>
+	<td ><b>이메일</b></td>
 </tr>
 <% while(result.next()){ %>
 
 <tr>
-	<td aligin=center><%=result.getString(1) %></td>
-	<td aligin=center><%=result.getString(2) %></td>
-	<td aligin=center><%=result.getString(3) %></td>
-	<td aligin=center><%=result.getString(4) %></td>
-	<td aligin=center><%=result.getString(5) %></td>
-	<td aligin=center><%=result.getString(6) %></td>
-	<td aligin=center><%=result.getString(7) %></td>
-	<td aligin=center><%=result.getString(8) %></td>
-	<td aligin=center><%=result.getString(9) %></td>
-	<td aligin=center><%=result.getString(10) %></td>
+	<td ><%=result.getString(1) %></td>
+	<td ><%=result.getString(2) %></td>
+	<td ><%=result.getString(3) %></td>
+	<td ><%=result.getString(4) %></td>
+	<td ><%=result.getString(5) %></td>
+	<td ><%=result.getString(6) %></td>
+	<td ><%=result.getString(7) %></td>
+	<td><%=result.getString(8) %></td>
+	<td ><%=result.getString(9) %></td>
+	<td><%=result.getString(10) %></td>
 	
 </tr>
 <%
@@ -74,7 +75,7 @@ finally{
 %>
 
 </table>
-
+</center>
 
 
 </body>
