@@ -9,6 +9,7 @@
 <body>
 <%@page import="java.sql.*" %>
 <%request.setCharacterEncoding("euc-kr"); %>
+<link rel="stylesheet" type ="text/css" href ="1.css">
 
 <h2>이름으로 조회하는 프로그램</h2>
 <hr>
@@ -16,7 +17,7 @@
 <%
 	Connection con = null;
 	
-	Statement pstmt = null;
+	PreparedStatement pstmt = null;
 	String driverName="com.mysql.cj.jdbc.Driver";
 	String dbURL="jdbc:mysql://localhost:3306/mysql";
 	String sql="select*from student where name like ?";
@@ -49,16 +50,16 @@
         while (result.next()) {
 %>
     <tr>
-       <td align=center><%= result.getString(1) %></td>
-       <td align=center><%= result.getString(2) %></td>
-       <td align=center><%= result.getString(3) %></td>
-       <td align=center><%= result.getString(4) %></td>
-       <td align=center><%= result.getString(5) %></td>
-       <td align=center><%= result.getString(6) %></td>
-       <td align=center><%= result.getString(7) %></td>
-       <td align=center><%= result.getString(8) %></td>
-       <td align=center><%= result.getString(9) %></td>
-       <td align=center><%= result.getString(10) %></td>
+       <td ><%= result.getString(1) %></td>
+       <td ><%= result.getString(2) %></td>
+       <td ><%= result.getString(3) %></td>
+       <td ><%= result.getString(4) %></td>
+       <td ><%= result.getString(5) %></td>
+       <td ><%= result.getString(6) %></td>
+       <td ><%= result.getString(7) %></td>
+       <td ><%= result.getString(8) %></td>
+       <td ><%= result.getString(9) %></td>
+       <td><%= result.getString(10) %></td>
     </tr>
 <%
 			rowCount++;
@@ -81,7 +82,7 @@
 <p><hr><font color=blue>
 <%
 	if (rowCount == 0) 
-		out.println("조회된 결과가 없습니다..");
+		out.println("조회된 결과가 없습니다.");
 	else 
 		out.println("조회된 결과가" + rowCount + "건입니다.");    
 %>
