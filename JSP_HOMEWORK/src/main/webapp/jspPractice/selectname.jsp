@@ -9,7 +9,7 @@
 <body>
 <%@page import="java.sql.*" %>
 <%request.setCharacterEncoding("euc-kr"); %>
-<link rel="stylesheet" type ="text/css" href ="1.css">
+<link rel="stylesheet" type ="text/css" href ="2.css">
 
 <h2>이름으로 조회하는 프로그램</h2>
 <hr>
