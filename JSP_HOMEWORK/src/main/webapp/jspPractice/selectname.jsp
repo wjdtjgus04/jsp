@@ -34,16 +34,16 @@
 %>
  <table >
     <tr>
-       <td align=center><b>���̵�</b></td>
-       <td align=center><b>��ȣ</b></td>
-       <td align=center><b>�̸�</b></td>
-       <td align=center><b>���г⵵</b></td>
-       <td align=center><b>�й�</b></td>
-       <td align=center><b>�а�</b></td>
-       <td align=center><b>�޴���1</b></td>
-       <td align=center><b>�޴���2</b></td>
-       <td align=center><b>�ּ�</b></td>
-       <td align=center><b>�̸���</b></td>
+        <td ><b>아이디</b></td>
+		<td ><b>암호</b></td>
+		<td ><b>이름</b></td>
+		<td ><b>입학년도</b></td>
+		<td ><b>학번</b></td>
+		<td ><b>학과</b></td>
+		<td><b>휴대폰1</b></td>
+		<td ><b>휴대폰2</b></td>
+		<td ><b>주소</b></td>
+		<td ><b>이메일</b></td>
     </tr>
 <%
         while (result.next()) {
@@ -66,7 +66,7 @@
         result.close();        
     }
     catch(Exception e) {
-    	out.println("MySql �����ͺ��̽� univdb�� student ��ȸ�� ������ �ֽ��ϴ�. <hr>");
+    	out.println("데이터베이스 접속에 실패했습니다.<hr>");
         out.println(e.toString());
         e.printStackTrace();
     }
