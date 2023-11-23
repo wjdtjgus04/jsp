@@ -21,7 +21,7 @@
 	String driverName="com.mysql.cj.jdbc.Driver";
 	String dbURL="jdbc:mysql://localhost:3306/mysql";
 	String sql="select*from student where name like ?";
-	String name=request.getParameter("snaem")+"%";
+	String name=request.getParameter("sname")+"%";
 	int rowCount = 0;
 	
 	try{
