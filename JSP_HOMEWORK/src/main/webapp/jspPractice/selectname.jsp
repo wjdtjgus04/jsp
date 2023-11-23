@@ -16,7 +16,7 @@
 <%
 	Connection con = null;
 	
-	Statement stmt = null;
+	Statement pstmt = null;
 	String driverName="com.mysql.cj.jdbc.Driver";
 	String dbURL="jdbc:mysql://localhost:3306/mysql";
 	String sql="select*from student where name like ?";
@@ -32,7 +32,7 @@
 		
 	
 %>
- <table width=100% border=2 cellpadding=1>
+ <table >
     <tr>
        <td align=center><b>���̵�</b></td>
        <td align=center><b>��ȣ</b></td>
@@ -76,14 +76,14 @@
     }
 %>
 </table>
-</center>
+
 
 <p><hr><font color=blue>
 <%
 	if (rowCount == 0) 
-		out.println("��ȸ�� ����� �����ϴ�.");
+		out.println("조회된 결과가 없습니다..");
 	else 
-		out.println("��ȸ�� ����� " + rowCount + "�� �Դϴ�.");    
+		out.println("조회된 결과가" + rowCount + "건입니다.");    
 %>
 </font>
 
