@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>forwardparam</title>
 </head>
 <body>
 <% int i = 12; %>
