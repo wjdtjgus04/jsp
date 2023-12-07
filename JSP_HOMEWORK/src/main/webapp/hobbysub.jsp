@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<p><font color=blue> 취미는
-<%=request. getParameter("hobby") %> 입니다
+<p><font color=blue> 
+<%=request. getParameter("programming") %>
 </font></p>
 </body>
 </html>
